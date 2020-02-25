@@ -17,8 +17,8 @@ Three files are needed for this module:
 
 Create a working directory for example `/path/silverSeq/` to store related input and output files for this pipeline.
 To perform deduplication on silver-seq read fastq file, open a terminal and run <br />
-`python /path/silverSeq/runDedup.py /path/silverSeq/sample1.fastq /path/silverSeq/sample1.index.fastq /path/silverSeq/sample1.dedup.fastq` <br />
-where `sample1.dedup.fastq` contains the deduplicated silver-seq reads that will be used for the downstream pipeline
+`python /path/silverSeq/runDedup.py /path/silverSeq/sample1.fastq /path/silverSeq/sample1.index.fastq /path/silverSeq/sample1.fastq.dedup` <br />
+where `sample1.fastq.dedup` contains the deduplicated silver-seq reads that will be used for the downstream pipeline
 
 ## Alignment
 This module follows the exceRpt small RNA-seq pipeline. [Here](http://github.gersteinlab.org/exceRpt/) is the installation instructions for exceRpt. The pre-compiled endogenenous genome and transcriptome indices of Human hg38 for is also needed for exceRpt to use, which can be downloaded [Here](http://org.gersteinlab.excerpt.s3-website-us-east-1.amazonaws.com/exceRptDB_v4_hg38_lowmem.tgz)
@@ -30,7 +30,7 @@ docker run -v /path/silverSeq/:/exceRptInput \
            -v /path/silverSeq/excerptHg38:/exceRpt_DB/hg38 \
            -t rkitchen/excerpt \
            TRIM_N_BASES_3p=25 \
-           INPUT_FILE_PATH=/exceRptInput/sample1.dedup.fastq \
+           INPUT_FILE_PATH=/exceRptInput/sample1.fastq.dedup \
            ADAPTER_SEQ=none \
            N_THREADS=10 \
            STAR_outFilterMatchNminOverLread=0.66 \
