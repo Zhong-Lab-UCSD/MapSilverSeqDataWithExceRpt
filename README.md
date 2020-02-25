@@ -3,7 +3,7 @@ Pipeline for preprocessing, alignment and report of silver-seq datasets.
 This pipeline consists of three modules: 
 1. a **preprocessing** module where a python script is applied to perform reads deduplication on fastq files 
 2. an **alignment** module where the *exceRpt* software (Rozowsky et al., 2019) is applied to map the reads to different RNA features 
-3. a **report** module where another python script is applied to parse the alignment results from exceRpt to generate a table of mapping statistics and a table of gene counts. The script is enabled to combine results from multiple silver-seq datasets together into one mapping statisitcs table and one gene counts table if they are all held under the same directory. 
+3. a **report** module where another python script is applied to parse the alignment results from exceRpt to generate a table of mapping statistics and a table of gene counts. The script is enabled to report results from one or multiple silver-seq datasets in the form of one mapping statisitcs table and one gene counts table. 
 ## Software Requirements
 - Python 3.4 or later
 - [exceRpt](http://github.gersteinlab.org/exceRpt/)
@@ -42,7 +42,7 @@ While the value of `N_THREADS` parameter in the above command can be adjusted ac
 ## Report
 `reportSilverSeq.py` is needed for this module.
 
-Put all exceRpt output subdirectories under a same directory for example `/path/silverSeq/excerptOutput/` so that the directory architerture will look like
+If you have mapping results of multiple silver-seq libraries, put all exceRpt output subdirectories under a same directory for example `/path/silverSeq/excerptOutput/` so that the directory architerture will look like
 <pre><code>
 /path/silverSeq/excerptOutput/
            --sample1/
