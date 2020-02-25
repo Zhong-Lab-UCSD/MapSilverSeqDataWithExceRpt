@@ -40,7 +40,7 @@ docker run -v /path/silverSeq/:/exceRptInput \
 While the value of `N_THREADS` parameter in the above command can be adjusted accorodingly, we do not recrommand to change the value of other parameters. After the mapping process finishes, the output is held under the directory of `/path/silverSeq/excerptOutput/sample1/`
 
 ## Report
-`computeGeneCounts.py` is needed for this module.
+`reportSilverSeq.py` is needed for this module.
 
 Put all exceRpt output subdirectories under a same directory for example `/path/silverSeq/excerptOutput/` so that the directory architerture will look like
 <pre><code>
@@ -52,7 +52,7 @@ Put all exceRpt output subdirectories under a same directory for example `/path/
            ...
 </code></pre>
 To get gene counts of these silver-seq libraries, run the following command <br />
-`python /path/silverSeq/computeGeneCounts.py /path/silverSeq/excerptOut` <br />
+`python /path/silverSeq/reportSilverSeq.py /path/silverSeq/excerptOut` <br />
 A file named as `mappingStats.csv` will be output to `/path/silverSeq/` directory as the mapping statsitics table derived from the silver-seq libraries. A file named as `geneCounts.csv` will be output to `/path/silverSeq/` directory as the gene counts table derived from the silver-seq libraries.
 
 
