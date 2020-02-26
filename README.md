@@ -52,8 +52,8 @@ If you have mapping results of multiple silver-seq libraries, put all exceRpt ou
            ...
 </code></pre>
 To get gene counts of these silver-seq libraries, run the following command <br />
-`python /path/silverSeq/reportSilverSeq.py /path/silverSeq/excerptOut` <br />
-A file named as `mappingStats.csv` will be output to `/path/silverSeq/` directory as the mapping statsitics table derived from the silver-seq libraries. A file named as `geneCounts.csv` will be output to `/path/silverSeq/` directory as the gene counts table derived from the silver-seq libraries.
+`python /path/silverSeq/reportSilverSeq.py /path/silverSeq/excerptHg38 /path/silverSeq/excerptOutput prefix` <br /> where `prefix` is the prefix you want to add to your output files.
+A file named as `mappingStats.csv` will be output as the mapping statsitics table derived from the silver-seq libraries. A file named as `geneCounts.csv` will be output as the gene counts table derived from the silver-seq libraries.
 
 
 
