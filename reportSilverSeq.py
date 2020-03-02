@@ -72,7 +72,7 @@ for sampleId in sampleIdList:
                 geneName=info[0]
                 dicGene_Count[geneName][i]+=float(splitLine[3])
             
-    fileList=glob.glob('results/excerptOutput_Feb21/*%s*/*/readCounts_miRNA*.txt'%(sampleId))
+    fileList=glob.glob('%s/%s/*/readCounts_miRNA*.txt'%(sys.argv[2],sampleId))
     for file in fileList:
         with open(file,'r') as f:
             next(f)
