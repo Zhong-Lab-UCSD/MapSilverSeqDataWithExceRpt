@@ -55,7 +55,7 @@ To get gene counts of these SILVER-seq libraries, run the following command <br 
 `python /path/silverSeq/reportSilverSeq.py /path/silverSeq/excerptHg38 /path/silverSeq/excerptOutput prefix` <br /> where `prefix` is the prefix you want to add to your output files.
 A file named as `mappingStats.csv` will be output as the mapping statistics table derived from the SILVER-seq libraries. A file named as `geneCounts.csv` will be output as the gene counts table derived from the SILVER-seq libraries. <br />
 ## Example Output
-In this repository, we provided example outputs of this pipeline using the SILVER-seq data published in the paper of Zhou et al,2019.
+In this repository, we provide example outputs of this pipeline using the SILVER-seq data published in the paper of Zhou et al,2019.<br />
 The mapping statisitcs table is available as [silverSeq_pnas_mappingStats.csv](https://github.com/Zhong-Lab-UCSD/MapSilverSeqDataWithExceRpt/blob/master/silverSeq_pnas_mappingStats.csv) <br />
 The compressed gene counts table is available as [silverSeq_pnas_geneCounts.csv.xz](https://github.com/Zhong-Lab-UCSD/MapSilverSeqDataWithExceRpt/blob/master/silverSeq_pnas_geneCounts.csv.xz)
 
